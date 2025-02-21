@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet1.css">
+</head>
+<body>
+    <script src="Knapp.js"></script>
+    <div class="quis-container">
+        <h1>Färg Quiz</h1>
+        <div class="question">
+            <p>Vad hetter följande färg?</p>
+            <img scr="Bilder/Teal.webp" alt="Bild på färg" title="Bild på färg" class="color-image">
+            <br>
+            <input type="radio" name="q1" value="Space cadet"> Space cadet<br>
+            <input type="radio" name="q1" value="Teal"> Teal<br>
+            <input type="radio" name="q1" value="Navy"> Navy<br>
+        </div>
+        <div class="question">
+            <p>Vad hetter följande färg?</p>
+            <img scr="Bilder/Navy.png" alt="Bild på färg" title="Bild på färg" class="color-image">
+            <br>
+            <input type="radio" name="q2" value="Navy"> Navy<br>
+            <input type="radio" name="q2" value="Cool black"> Cool black<br>
+            <input type="radio" name="q2" value="Space cadet"> Space cadet<br>
+        </div>
+        <div class="question">
+            <p>Vad hetter följande färg?</p>
+            <img scr="Bilder/Turkos.webp" alt="Bild på färg" title="Bild på färg" class="color-image">
+            <br>
+            <input type="radio" name="q3" value="Turkos"> Turkos<br>
+            <input type="radio" name="q3" value="Teal"> Teal<br>
+            <input type="radio" name="q3" value="Liberty"> Liberty<br>
+        </div>
+        <button onclick="checkAnswers()">Kontrolera Svar</button>
+        <p is="resultat"></p>
+        <p>Antal rätt: <span id="score">0</span></p>
+    </div>
+    
+</body>
+</html>
