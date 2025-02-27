@@ -28,11 +28,29 @@ function checkAnswers() {
         document.querySelector('.question:nth-of-type(3)').style.color = 'red'; 
     }
 
-    // Visa resultatmeddelande
+    // Visa medelande
     let resultMessage = document.getElementById('resultat');
     resultMessage.textContent = `Du fick ${score} av 3 rätt.`;
     resultMessage.style.display = 'block';
 
-    // Uppdatera poängräknaren
+    // Uppdatera poängräkning
     document.getElementById('score').textContent = score;
 }
+function resetQuiz() {
+    // Återställ knapparna
+    let radios = document.querySelectorAll('input[type="radio"]');
+    radios.forEach(radio => radio.checked = false);
+
+    // Återställ färg på text
+    let questions = document.querySelectorAll('.question');
+    questions.forEach(question => question.style.color = 'black');
+
+    // Återställ påengen
+    document.getElementById('score').textContent = '0';
+
+    // Döljer resultat medelandet
+    let resultMessage = document.getElementById('resultat');
+    resultMessage.textContent = '';
+    resultMessage.style.display = 'none';
+}
+

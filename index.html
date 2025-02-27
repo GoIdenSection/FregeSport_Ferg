@@ -12,7 +12,7 @@
         <h1>Färg Quiz</h1>
         <div class="question">
             <p>Vad hetter följande färg?</p>
-            <img scr="Bilder/Teal.webp" alt="Bild på färg" title="Bild på färg" class="color-image">
+            <img src="Bilder/Teal.webp" alt="Bild på färg" title="Bild på färg" class="color-image">
             <br>
             <input type="radio" name="q1" value="Space cadet"> Space cadet<br>
             <input type="radio" name="q1" value="Teal"> Teal<br>
@@ -20,7 +20,7 @@
         </div>
         <div class="question">
             <p>Vad hetter följande färg?</p>
-            <img scr="Bilder/Navy.png" alt="Bild på färg" title="Bild på färg" class="color-image">
+            <img src="Bilder/Navy.png" alt="Bild på färg" title="Bild på färg" class="color-image">
             <br>
             <input type="radio" name="q2" value="Navy"> Navy<br>
             <input type="radio" name="q2" value="Cool black"> Cool black<br>
@@ -28,15 +28,16 @@
         </div>
         <div class="question">
             <p>Vad hetter följande färg?</p>
-            <img scr="Bilder/Turkos.webp" alt="Bild på färg" title="Bild på färg" class="color-image">
+            <img src="Bilder/Turkos.webp" alt="Bild på färg" title="Bild på färg" class="color-image">
             <br>
             <input type="radio" name="q3" value="Turkos"> Turkos<br>
             <input type="radio" name="q3" value="Teal"> Teal<br>
             <input type="radio" name="q3" value="Liberty"> Liberty<br>
         </div>
         <button onclick="checkAnswers()">Kontrolera Svar</button>
-        <p is="resultat"></p>
+        <p id="resultat"></p>
         <p>Antal rätt: <span id="score">0</span></p>
+        <button onclick="resetQuiz()">Gör om quizet</button>
     </div>
     
 </body>
