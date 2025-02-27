@@ -47,3 +47,16 @@ button:hover {
     border-radius: 8px;
     border: 2px solid #ddd;
 }
+#box {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    background-color: #6A5ACD;
+}
+.center-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

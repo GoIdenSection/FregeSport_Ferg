@@ -27,28 +27,36 @@ function checkAnswers() {
     } else {
         document.querySelector('.question:nth-of-type(3)').style.color = 'red'; 
     }
+    // chack question 4
+    let q4Answer = document.querySelector('input[name="q4"]:checked');
+    if(q4Answer && q4Answer.value === '#6A5ACD') {
+        score++;
+        document.querySelector('.question:nth-of-type(4)').style.color = '#4CAF50';
+    } else {
+        document.querySelector('.question:nth-of-type(4)').style.color = 'red'; 
+    }
 
-    // Visa medelande
+    //medelande
     let resultMessage = document.getElementById('resultat');
-    resultMessage.textContent = `Du fick ${score} av 3 rätt.`;
+    resultMessage.textContent = `Du fick ${score} av 4 rätt.`;
     resultMessage.style.display = 'block';
 
-    // Uppdatera poängräkning
     document.getElementById('score').textContent = score;
 }
+//återställer:
 function resetQuiz() {
-    // Återställ knapparna
+    // knapparna
     let radios = document.querySelectorAll('input[type="radio"]');
     radios.forEach(radio => radio.checked = false);
 
-    // Återställ färg på text
+    // färg på text
     let questions = document.querySelectorAll('.question');
     questions.forEach(question => question.style.color = 'black');
 
-    // Återställ påengen
+    // påengen
     document.getElementById('score').textContent = '0';
 
-    // Döljer resultat medelandet
+    // medelandet
     let resultMessage = document.getElementById('resultat');
     resultMessage.textContent = '';
     resultMessage.style.display = 'none';
